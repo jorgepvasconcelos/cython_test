@@ -1,12 +1,11 @@
 import cython
 
 
-def list_sum(range_list: cython.uint) -> cython.uint:
+def list_sum(range_list: cython.ulonglongint) -> cython.ulonglongint:
     generated_list: cython.freelist = range(range_list)
 
-    a: cython.uint
-    b: cython.uint
-    last_number: cython.int
+    a: cython.ulonglongint = 0
+    b: cython.ulonglongint = 0
     first: cython.bint = True
 
     new_list: cython.array = []

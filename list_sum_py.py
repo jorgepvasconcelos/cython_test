@@ -1,8 +1,8 @@
 def list_sum(range_list: int):
     generated_list = range(range_list)
 
-    a: int
-    b: int
+    a: int = 0
+    b: int = 0
     first: bool = True
 
     new_list: list = []

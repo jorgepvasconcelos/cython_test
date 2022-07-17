@@ -1,6 +1,6 @@
 build:
-	easycython list_sum_cy.py
-	easycython *.pyx
+	cythonize -i list_sum_cy.py
+	cythonize -i *.pyx
 
 
 clean:
