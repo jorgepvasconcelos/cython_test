@@ -1,15 +1,15 @@
 import cython
 
 
-def list_sum(range_list: cython.int):
-    generated_list = range(range_list)
+def list_sum(range_list: cython.uint) -> cython.uint:
+    generated_list: cython.freelist = range(range_list)
 
-    a: cython.int
-    b: cython.int
-    len_list = len(generated_list)
-
-    new_list: list = []
+    a: cython.uint
+    b: cython.uint
     last_number: cython.int
+
+    len_list: cython.uint = len(generated_list)
+    new_list: cython.array = []
 
     for index, value in enumerate(generated_list):
         a = value
