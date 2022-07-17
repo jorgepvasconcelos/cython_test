@@ -1,16 +1,14 @@
 import array
 from cpython cimport array
 
-
-cdef int list_sum(int range_list):
-    cdef array.array generated_list = range(range_list)
+cpdef int list_sum(int range_list):
+    cdef array.array generated_list = array.array('i', [*range(range_list)])
 
     cdef int a
     cdef int b
     cdef int last_number
     cdef int len_list
     cdef array.array new_list
-
 
     len_list = len(generated_list)
     new_list = array.array('i', [])

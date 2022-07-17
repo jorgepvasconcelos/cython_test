@@ -6,8 +6,10 @@ authors = ["Jorge Vasconcelos <jorge.r.p.v@hotmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+
+Cython = "^0.29.30"
 easycython = "^1.0.7"
-Cython = "^0.29.24"
+
 
 [tool.poetry.dev-dependencies]
 

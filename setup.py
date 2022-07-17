@@ -1,4 +1,8 @@
-import setuptools
-import Cython.Build as cb
+from distutils.core import setup
+from Cython.Build import cythonize
 
-setuptools.setup(name='My Cython Project',     ext_modules=cb.cythonize('list_sum_pyx.pyx'))
+setup(
+    name='list sum',
+    ext_modules=cythonize("list_sum_pyx.pyx"),
+    zip_safe=False
+)
