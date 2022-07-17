@@ -3,19 +3,19 @@ def list_sum(range_list: int):
 
     a: int
     b: int
-    len_list = len(generated_list)
+    first: bool = True
 
     new_list: list = []
     last_number: int
 
-    for index, value in enumerate(generated_list):
+    for value in generated_list:
         a = value
-        if index == len_list:
-            b = last_number
-        else:
-            b = generated_list[index]
-            last_number = b
+
+        if first:
+            b = a
+            first = False
 
         new_list.append(b + a)
+        b = a
 
     return sum(new_list)

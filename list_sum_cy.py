@@ -7,18 +7,18 @@ def list_sum(range_list: cython.uint) -> cython.uint:
     a: cython.uint
     b: cython.uint
     last_number: cython.int
+    first: cython.bint = True
 
-    len_list: cython.uint = len(generated_list)
     new_list: cython.array = []
 
-    for index, value in enumerate(generated_list):
+    for value in generated_list:
         a = value
-        if index == len_list:
-            b = last_number
-        else:
-            b = generated_list[index]
-            last_number = b
+
+        if first:
+            b = a
+            first = False
 
         new_list.append(b + a)
+        b = a
 
     return sum(new_list)
